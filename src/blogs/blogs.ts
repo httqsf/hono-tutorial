@@ -57,7 +57,7 @@ app.delete("/:id", async (c) => {
     return c.json({message: "Post not found"}, 404);
   }
   blogPosts = blogPosts.filter((p) => p.id !== id) 
-  return c.json({message: "Blog Post Deleted"});
+  return c.json({message: `Blog Post Deleted id: ${id}`});
 })
 
 export default app;
