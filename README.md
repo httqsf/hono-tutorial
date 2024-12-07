@@ -6,21 +6,20 @@ npm run dev
 ```
 npm run deploy
 ```
+# API ドキュメント
 
-# API Documentation
-
-## Base URL
-- **Base URL**: `/`
+## ベースURL
+- **ベースURL**: `/`
 
 ---
 
-## Endpoints
+## エンドポイント
 
-### General
+### 一般
 
 #### `GET /`
-- **Description**: Returns a welcome message or a JSON object with blog posts (depending on the specific application logic).
-- **Response**:
+- **説明**: ウェルカムメッセージまたはブログ記事のJSONオブジェクトを返します（アプリケーションのロジックに応じて変わります）。
+- **レスポンス**:
   - `200 OK`:
     ```json
     {
@@ -41,20 +40,20 @@ npm run deploy
 
 ---
 
-### Page Authorization
+### ページ認証
 
 #### `GET /page`
-- **Description**: Returns a message indicating successful authorization.
-- **Response**:
+- **説明**: 認証が成功したことを示すメッセージを返します。
+- **レスポンス**:
   - `200 OK`: `You are authorized`
 
 ---
 
-### Posts Management
+### ブログ投稿の管理
 
 #### `GET /posts`
-- **Description**: Retrieves all blog posts.
-- **Response**:
+- **説明**: すべてのブログ記事を取得します。
+- **レスポンス**:
   - `200 OK`:
     ```json
     [
@@ -72,8 +71,8 @@ npm run deploy
     ```
 
 #### `GET /posts/:id`
-- **Description**: Retrieves a blog post by its ID.
-- **Response**:
+- **説明**: 指定されたIDのブログ記事を取得します。
+- **レスポンス**:
   - `200 OK`:
     ```json
     {
@@ -90,8 +89,8 @@ npm run deploy
     ```
 
 #### `POST /posts`
-- **Description**: Creates a new blog post.
-- **Request Body**:
+- **説明**: 新しいブログ記事を作成します。
+- **リクエストボディ**:
   ```json
   {
     "title": "New Blog",
