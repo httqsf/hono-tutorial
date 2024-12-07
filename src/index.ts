@@ -1,25 +1,26 @@
-import { Hono } from 'hono'
-import { prettyJSON } from 'hono/pretty-json'
-import posts from "./blogs"
-import auth from "./auth"
-import { basicAuth } from 'hono/basic-auth'
+import { Hono } from "hono";
+import { prettyJSON } from "hono/pretty-json";
+import posts from "./blogs";
+import auth from "./auth";
+import { basicAuth } from "hono/basic-auth";
 
 
-const app = new Hono()
+const app = new Hono();
 
-app.use("*", prettyJSON())
+app.use("*", prettyJSON());
 app.use(
-  '/auth/:path',
+  "/auth/*",
   basicAuth({
-    username: 'hono',
-    password: 'password',
+    username: "hono",
+    password: "password",
   })
-)
-app.route("/auth", auth)
-app.route("/posts", posts)
+);
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
+app.route("/posts", posts);
+app.route("/auth", auth);
 
-export default app
+app.get("/", (c) => {
+  return c.text("Hello Hono!");
+});
+
+export default app;
