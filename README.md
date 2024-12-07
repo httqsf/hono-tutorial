@@ -47,6 +47,8 @@ npm run deploy
 - **レスポンス**:
   - `200 OK`: `You are authorized`
 
+- username: "hono",
+- password: "password",
 ---
 
 ### ブログ投稿の管理
