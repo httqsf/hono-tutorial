@@ -90,16 +90,15 @@ npm run deploy
       "title": "Blog1",
       "content": "Blog1 Posts"
     }
-    ```
   - `404 Not Found`:
     ```json
     {
       "message": "not found this page"
     }
-    ```
+
 
 #### `POST /posts`
-- **説明**: 新しいブログ記事を作成します。
+- **説明**: リクエストボディを追加することで新しいブログ記事を作成します。
 - **リクエストボディ**:
   ```json
   {
@@ -113,3 +112,45 @@ npm run deploy
     "title": "New Blog",
     "content": "This is a new blog post."
   }
+
+
+#### `PUT /posts/:id`
+- **説明**: 指定されたIDのブログ記事を更新します。
+- **パスパラメータ**:
+  - `id` (string): 更新対象のブログ記事のID
+- **リクエストボディ**:
+  ```json
+  {
+    "title": "Updated Blog",
+    "content": "Updated blog content."
+  }
+- **レスポンス**:
+  ```json
+  {
+    "id": "1",
+    "title": "Updated Blog",
+    "content": "Updated blog content."
+  },
+
+
+---
+
+### ブログ記事の削除
+
+#### `DELETE /posts/:id`
+- **説明**: 指定されたIDのブログ記事を削除します。
+- **パスパラメータ**:
+  - `id` (string): 削除対象のブログ記事のID
+- **レスポンス**:
+  - `200 OK`:
+    ```json
+    {
+      "message": "Blog Post Deleted"
+    }
+    ```
+  - `404 Not Found`:
+    ```json
+    {
+      "message": "Post not found"
+    }
+    ```
