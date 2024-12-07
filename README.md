@@ -40,19 +40,19 @@ npm run deploy
 以下のダミーデータがあります。
 ```
     {
-      id: "1",
-      title: "Blog1",
-      content: "Blog1 Posts"
+      "id": "1",
+      "title": "Blog1",
+      "content": "Blog1 Posts"
     },
     {
-      id: "2", 
-      title: "Blog2",
-      content: "Blog2 Posts"
+      "id": "2", 
+      "title": "Blog2",
+      "content": "Blog2 Posts"
     },
     {
-      id: "3",
-      title: "Blog3", 
-      content: "Blog3 Posts"
+      "id": "3",
+      "title": "Blog3", 
+      "content": "Blog3 Posts"
     },
 ```
 
@@ -62,21 +62,21 @@ npm run deploy
   - `200 OK`:
     ```json
     [
-        {
-        id: "1",
-        title: "Blog1",
-        content: "Blog1 Posts"
-        },
-        {
-        id: "2", 
-        title: "Blog2",
-        content: "Blog2 Posts"
-        },
-        {
-        id: "3",
-        title: "Blog3", 
-        content: "Blog3 Posts"
-        },
+      {
+        "id": "1",
+        "title": "Blog1",
+        "content": "Blog1 Posts"
+      },
+      {
+        "id": "2", 
+        "title": "Blog2",
+        "content": "Blog2 Posts"
+      },
+      {
+        "id": "3",
+        "title": "Blog3", 
+        "content": "Blog3 Posts"
+      },
     ]
     ```
 
